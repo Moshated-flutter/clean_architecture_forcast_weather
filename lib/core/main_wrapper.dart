@@ -1,4 +1,4 @@
-import 'package:clean_architecture_forcast_weather/features/weather/data/datasources/remote/api_provider.dart';
+import '../features/weather/data/datasources/remote/api_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

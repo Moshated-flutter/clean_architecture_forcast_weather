@@ -1,4 +1,4 @@
-import 'package:clean_architecture_forcast_weather/core/utils/constants.dart';
+import '../../../../../core/utils/constants.dart';
 import 'package:dio/dio.dart';
 
 class ApiProvider {

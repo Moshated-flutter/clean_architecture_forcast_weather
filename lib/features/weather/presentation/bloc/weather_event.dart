@@ -6,3 +6,9 @@ abstract class WeatherEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+class LoadCwEvent extends WeatherEvent {
+  final String cityName;
+
+  LoadCwEvent(this.cityName);
+}

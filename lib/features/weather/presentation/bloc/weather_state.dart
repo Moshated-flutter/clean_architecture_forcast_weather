@@ -1,10 +1,13 @@
 part of 'weather_bloc.dart';
 
-abstract class WeatherState extends Equatable {
-  const WeatherState();
+class WeatherState {
+  CwStatus cwStatus;
 
-  @override
-  List<Object> get props => [];
+  WeatherState({required this.cwStatus});
+
+  WeatherState copyWith({CwStatus? newCwStatus}) {
+    return WeatherState(
+      cwStatus: newCwStatus ?? this.cwStatus,
+    );
+  }
 }
-
-class WeatherInitial extends WeatherState {}

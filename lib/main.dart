@@ -1,9 +1,10 @@
+import 'package:clean_architecture_forcast_weather/locator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import 'core/main_wrapper.dart';
 
-void main() {
+void main() async {
+  await setup();
   runApp(const MyApp());
 }
 

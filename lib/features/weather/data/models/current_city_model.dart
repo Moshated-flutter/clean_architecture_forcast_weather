@@ -1,4 +1,4 @@
-import 'package:clean_architecture_forcast_weather/features/weather/domain/entities/current_city_entity.dart';
+import '../../domain/entities/current_city_entity.dart';
 
 class CurrentCityModel extends CurrentCityEntity {
   CurrentCityModel({
