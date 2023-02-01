@@ -1,5 +1,6 @@
-import '../../../../../core/utils/constants.dart';
 import 'package:dio/dio.dart';
+
+import '../../../../../core/utils/constants.dart';
 
 class ApiProvider {
   final Dio _dio = Dio();

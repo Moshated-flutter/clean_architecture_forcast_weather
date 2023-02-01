@@ -16,9 +16,11 @@ class WeatherRepositoryImp extends WeatherRepository {
       String cityName) async {
     try {
       Response response = await apiProvider.callCurrentWeather(cityName);
+
       if (response.statusCode == 200) {
         CurrentCityEntity currentCityEntity =
             CurrentCityModel.fromJson(response.data);
+        print(currentCityEntity);
         return DataSucces(currentCityEntity);
       } else {
         return const DataFailure('Something Went Wrong');

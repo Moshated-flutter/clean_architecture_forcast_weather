@@ -1,7 +1,7 @@
 import '../../domain/entities/current_city_entity.dart';
 
 class CurrentCityModel extends CurrentCityEntity {
-  CurrentCityModel({
+  const CurrentCityModel({
     Coord? coord,
     List<Weather>? weather,
     String? base,
@@ -30,6 +30,7 @@ class CurrentCityModel extends CurrentCityEntity {
           timezone: timezone,
           id: id,
           cod: cod,
+          name: name,
         );
 
   factory CurrentCityModel.fromJson(Map<String, dynamic> json) {
@@ -102,38 +103,38 @@ class CurrentCityModel extends CurrentCityEntity {
     // }
   }
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> _data = <String, dynamic>{};
-    if (coord != null) {
-      _data["coord"] = coord?.toJson();
-    }
-    if (weather != null) {
-      _data["weather"] = weather?.map((e) => e.toJson()).toList();
-    }
-    _data["base"] = base;
-    if (main != null) {
-      _data["main"] = main?.toJson();
-    }
-    _data["visibility"] = visibility;
-    if (wind != null) {
-      _data["wind"] = wind?.toJson();
-    }
-    if (rain != null) {
-      _data["rain"] = rain?.toJson();
-    }
-    if (clouds != null) {
-      _data["clouds"] = clouds?.toJson();
-    }
-    _data["dt"] = dt;
-    if (sys != null) {
-      _data["sys"] = sys?.toJson();
-    }
-    _data["timezone"] = timezone;
-    _data["id"] = id;
-    _data["name"] = name;
-    _data["cod"] = cod;
-    return _data;
-  }
+  // Map<String, dynamic> toJson() {
+  //   final Map<String, dynamic> _data = <String, dynamic>{};
+  //   if (coord != null) {
+  //     _data["coord"] = coord?.toJson();
+  //   }
+  //   if (weather != null) {
+  //     _data["weather"] = weather?.map((e) => e.toJson()).toList();
+  //   }
+  //   _data["base"] = base;
+  //   if (main != null) {
+  //     _data["main"] = main?.toJson();
+  //   }
+  //   _data["visibility"] = visibility;
+  //   if (wind != null) {
+  //     _data["wind"] = wind?.toJson();
+  //   }
+  //   if (rain != null) {
+  //     _data["rain"] = rain?.toJson();
+  //   }
+  //   if (clouds != null) {
+  //     _data["clouds"] = clouds?.toJson();
+  //   }
+  //   _data["dt"] = dt;
+  //   if (sys != null) {
+  //     _data["sys"] = sys?.toJson();
+  //   }
+  //   _data["timezone"] = timezone;
+  //   _data["id"] = id;
+  //   _data["name"] = name;
+  //   _data["cod"] = cod;
+  //   return _data;
+  // }
 }
 
 class Sys {
